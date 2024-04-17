@@ -82,9 +82,13 @@ classDiagram
 
     class Histogram {
         -Vector~int~ buckets_
+        %% target forget factor
         -int base_forget_factor_
+        %% start increasing forget factor after Nth round
         -double start_forget_weight_
+        %% actual forget factor
         -int forget_factor_
+        %% Nth round
         -int add_count_
         +Add(index)
         +Quantile(probability) int
